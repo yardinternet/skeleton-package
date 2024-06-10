@@ -1,9 +1,9 @@
 <?php
 
-namespace VendorName\ExamplePackage\Console;
+namespace Yard\SkeletonPackage\Console;
 
 use Roots\Acorn\Console\Commands\Command;
-use VendorName\ExamplePackage\Facades\Example;
+use Yard\SkeletonPackage\Facades\Example;
 
 class ExampleCommand extends Command
 {

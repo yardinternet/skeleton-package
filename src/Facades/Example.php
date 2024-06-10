@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorName\ExamplePackage\Facades;
+namespace Yard\SkeletonPackage\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

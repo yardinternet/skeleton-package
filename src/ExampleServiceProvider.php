@@ -1,10 +1,10 @@
 <?php
 
-namespace VendorName\ExamplePackage\Providers;
+namespace Yard\SkeletonPackage;
 
 use Illuminate\Support\ServiceProvider;
-use VendorName\ExamplePackage\Console\ExampleCommand;
-use VendorName\ExamplePackage\Example;
+use Yard\SkeletonPackage\Console\ExampleCommand;
+use Yard\SkeletonPackage\Example;
 
 class ExampleServiceProvider extends ServiceProvider
 {
