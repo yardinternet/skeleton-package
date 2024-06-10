@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Yard\SkeletonPackage\Console;
 
 use Illuminate\Console\Command;

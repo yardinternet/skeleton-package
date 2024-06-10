@@ -1,10 +1,11 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Yard\SkeletonPackage;
 
 use Illuminate\Support\ServiceProvider;
 use Yard\SkeletonPackage\Console\ExampleCommand;
-use Yard\SkeletonPackage\Example;
 
 class ExampleServiceProvider extends ServiceProvider
 {
