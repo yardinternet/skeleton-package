@@ -7,18 +7,14 @@ on:
 jobs:
   lockfile_changes:
     runs-on: ubuntu-latest
-    # Permission overwrite is required for Dependabot PRs, see "Common issues" below.
     permissions:
       pull-requests: write
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0 # Required to make it possible to compare with PR base branch
       - name: NPM Lockfile Changes
         uses: codepunkt/npm-lockfile-changes@main
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          # Optional inputs, can be deleted safely if you are happy with default values.
-          collapsibleThreshold: 25
-          failOnDowngrade: false
-          path: package-lock.json
-          updateComment: true
