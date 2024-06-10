@@ -14,7 +14,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # Required to make it possible to compare with PR base branch
+          fetch-depth: 1 # Required to make it possible to compare with PR base branch
       - name: NPM Lockfile Changes
         uses: codepunkt/npm-lockfile-changes@main
         with:
