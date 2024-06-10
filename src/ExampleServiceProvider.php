@@ -20,7 +20,7 @@ class ExampleServiceProvider extends ServiceProvider
         });
 
         $this->mergeConfigFrom(
-            __DIR__.'/../../config/example.php',
+            __DIR__.'/../config/example.php',
             'example'
         );
     }
@@ -33,11 +33,11 @@ class ExampleServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__.'/../../config/example.php' => $this->app->configPath('example.php'),
+            __DIR__.'/../config/example.php' => $this->app->configPath('example.php'),
         ], 'config');
 
         $this->loadViewsFrom(
-            __DIR__.'/../../resources/views',
+            __DIR__.'/../resources/views',
             'Example',
         );
 
