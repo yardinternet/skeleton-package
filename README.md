@@ -1,19 +1,38 @@
-# Acorn Example Package
+# Yard Skeleton Package
 
-This repo can be used to scaffold an Acorn package. See the [Acorn Package Development](https://roots.io/acorn/docs/package-development/) docs for further information.
+This repository provides a scaffold for creating an Acorn package. For more detailed information, please refer to the [Acorn Package Development](https://roots.io/acorn/docs/package-development/) documentation.
 
 ## Installation
 
-You can install this package with Composer:
+To install this package using Composer, follow these steps:
 
-```bash
-composer require vendor-name/example-package
-```
+1. Add the following to the `repositories` section of your `composer.json`:
+
+    ```json
+    {
+      "type": "vcs",
+      "url": "git@github.com:yardinternet/skeleton-package.git"
+    }
+    ```
+
+2. Add the following to the `require` section of your `composer.json`:
+
+    ```json
+    {
+      "yard/skeleton-package": "*"
+    }
+    ```
+
+3. Run the following command to install the package:
+
+    ```sh
+    composer update
+    ```
 
 You can publish the config file with:
 
 ```shell
-$ wp acorn vendor:publish --provider="VendorName\ExamplePackage\Providers\ExampleServiceProvider"
+wp acorn vendor:publish --provider="Yard\SkeletonPackage\ExampleServiceProvider"
 ```
 
 ## Usage
@@ -27,5 +46,5 @@ From a Blade template:
 From WP-CLI:
 
 ```shell
-$ wp acorn example
+wp acorn example
 ```
