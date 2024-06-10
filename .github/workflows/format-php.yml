@@ -12,9 +12,10 @@ jobs:
     # Run only if PHP files have changed
     if: ${{ needs.what-has-changed.outputs.php == 'true' }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           ref: ${{ github.head_ref }}
+          fetch-depth: 0
 
       - name: Run php-cs-fixer
         uses: docker://oskarstark/php-cs-fixer-ga
