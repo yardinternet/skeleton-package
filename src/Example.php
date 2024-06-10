@@ -3,37 +3,33 @@
 namespace Yard\SkeletonPackage;
 
 use Illuminate\Support\Arr;
-use Roots\Acorn\Application;
+use \Illuminate\Contracts\Foundation\Application;
+use Webmozart\Assert\Assert;
 
 class Example
 {
     /**
-     * The application instance.
-     *
-     * @var \Roots\Acorn\Application
-     */
-    protected $app;
-
-    /**
      * Create a new Example instance.
-     *
-     * @param  \Roots\Acorn\Application  $app
-     * @return void
      */
-    public function __construct(Application $app)
+    public function __construct(protected Application $app)
     {
-        $this->app = $app;
     }
 
     /**
      * Retrieve a random inspirational quote.
-     *
-     * @return string
      */
-    public function getQuote()
+    public function getQuote(): string
     {
-        return Arr::random(
-            config('example.quotes')
+        $quotes = config('example.quotes');
+
+        Assert::isArray($quotes);
+
+        $quote = Arr::random(
+            $quotes
         );
+
+        Assert::string($quote);
+
+        return $quote;
     }
 }
