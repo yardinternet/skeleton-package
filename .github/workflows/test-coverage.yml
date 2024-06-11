@@ -1,0 +1,45 @@
+name: PhpUnit Coverage Badge
+
+on: push
+
+jobs:
+  test:
+    name: Run tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@2.9.0
+        with:
+          php-version: '8.1'
+          extensions:  simplexml, dom, xml, xdebug, intl
+
+      - name: Get composer cache directory
+        id: composer-cache
+        run: echo "::set-output name=dir::$(composer config cache-files-dir)"
+
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: ${{ steps.composer-cache.outputs.dir }}
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: ${{ runner.os }}-composer-
+
+      - name: Install dependencies
+        run: composer install --prefer-dist
+
+      - name: Recreate autoload file
+        run: composer dump-autoload
+
+      - name: Run Unit Tests
+        run: XDEBUG_MODE_COVERAGE=coverage vendor/bin/pest --coverage-clover=clover.xml
+
+      - name: Generate test coverage badge
+        uses: timkrase/phpunit-coverage-badge@v1.2.1
+        with:
+          coverage_badge_path: 'badge.svg'
+          push_badge: true
+          repo_token: ${{ secrets.GITHUB_TOKEN }}

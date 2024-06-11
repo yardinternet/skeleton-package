@@ -1,5 +1,7 @@
 # Yard Skeleton Package
 
+![Code Coverage Badge](./badge.svg)
+
 This repository provides a scaffold for creating an Acorn package. For more detailed information, please refer to the [Acorn Package Development](https://roots.io/acorn/docs/package-development/) documentation.
 
 ## Installation
