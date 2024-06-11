@@ -4,48 +4,29 @@ declare(strict_types=1);
 
 namespace Yard\SkeletonPackage;
 
-use Illuminate\Support\ServiceProvider;
+use Spatie\LaravelPackageTools\Package;
+use Spatie\LaravelPackageTools\PackageServiceProvider;
 use Yard\SkeletonPackage\Console\ExampleCommand;
 
-class ExampleServiceProvider extends ServiceProvider
+class ExampleServiceProvider extends PackageServiceProvider
 {
-    /**
-     * Register any application services.
-     *
-     * @return void
-     */
-    public function register()
-    {
-        $this->app->singleton('Example', function () {
-            return new Example($this->app);
-        });
 
-        $this->mergeConfigFrom(
-            __DIR__.'/../config/example.php',
-            'example'
-        );
+    public function configurePackage(Package $package): void
+    {
+        $package
+            ->name('example')
+            ->hasConfigFile()
+            ->hasViews()
+            ->hasCommand(ExampleCommand::class);
     }
 
-    /**
-     * Bootstrap any application services.
-     *
-     * @return void
-     */
-    public function boot()
+    public function packageRegistered(): void
     {
-        $this->publishes([
-            __DIR__.'/../config/example.php' => $this->app->configPath('example.php'),
-        ], 'config');
+        $this->app->singleton('Example', fn () => new Example($this->app));
+    }
 
-        $this->loadViewsFrom(
-            __DIR__.'/../resources/views',
-            'Example',
-        );
-
-        $this->commands([
-            ExampleCommand::class,
-        ]);
-
+    public function packageBooted(): void
+    {
         $this->app->make('Example');
     }
 }
