@@ -39,7 +39,7 @@ jobs:
         # For pull requests it's not necessary to checkout the code
         if: ${{ github.event_name != 'pull_request' }}
 
-      - uses: dorny/paths-filter@v2
+      - uses: dorny/paths-filter@v3
         id: filter
         with:
           base: ${{ github.ref }}
