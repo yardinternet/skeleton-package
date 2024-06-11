@@ -1,8 +1,10 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Yard\SkeletonPackage\Console;
 
-use Roots\Acorn\Console\Commands\Command;
+use Illuminate\Console\Command;
 use Yard\SkeletonPackage\Facades\Example;
 
 class ExampleCommand extends Command
@@ -23,10 +25,8 @@ class ExampleCommand extends Command
 
     /**
      * Execute the console command.
-     *
-     * @return void
      */
-    public function handle()
+    public function handle(): void
     {
         $this->info(
             Example::getQuote()

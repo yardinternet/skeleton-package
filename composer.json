@@ -1,16 +1,42 @@
 {
 	"name": "yard/skeleton-package",
 	"type": "package",
-	"description": "A skeleton example package for Roots Acorn.",
+	"description": "A skeleton package for Roots Acorn.",
+  "version": "1.0.0",
 	"license": "MIT",
-	"autoload": {
-		"psr-4": {
-			"Yard\\SkeletonPackage\\": "src/"
+  "config": {
+		"allow-plugins": {
+			"pestphp/pest-plugin": true
 		}
 	},
 	"require": {
 		"php": "^8.0",
 		"spatie/laravel-package-tools": "^1.16"
+	},
+  "require-dev": {
+		"friendsofphp/php-cs-fixer": "^3.57",
+		"orchestra/testbench": "^8.23",
+		"pestphp/pest": "^2.34",
+		"szepeviktor/phpstan-wordpress": "^1.0",
+		"larastan/larastan": "^2.0"
+	},
+  "autoload": {
+		"psr-4": {
+			"Yard\\SkeletonPackage\\": "src/"
+		}
+	},
+  "autoload-dev": {
+		"psr-4": {
+			"Yard\\SkeletonPackage\\Tests\\": "tests/"
+		}
+	},
+  "scripts": {
+		"analyse": [
+			"sed -i -e 's#function __(#function ____(#' ./vendor/php-stubs/wordpress-stubs/wordpress-stubs.php",
+			"vendor/bin/phpstan analyse --debug --memory-limit 1G"
+		],
+		"format": "vendor/bin/php-cs-fixer fix",
+		"test": "vendor/bin/pest"
 	},
 	"extra": {
 		"acorn": {

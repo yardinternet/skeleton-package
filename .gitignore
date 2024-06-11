@@ -1,2 +1,5 @@
-/vendor
-/node_modules
+.phpunit.cache
+.php-cs-fixer.cache
+vendor
+node_modules
+build
