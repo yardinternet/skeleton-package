@@ -9,15 +9,21 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+    reviewers:
+      - yardinternet/wordpress-backend
 
   # Maintain dependencies for npm
-  - package-ecosystem: "npm"
-    directory: "/"
-    schedule:
-      interval: "weekly"
+  # - package-ecosystem: "npm"
+  #   directory: "/"
+  #   schedule:
+  #     interval: "weekly"
+  #   reviewers:
+  #     - yardinternet/wordpress-frontend
 
   # Maintain dependencies for Composer
   - package-ecosystem: "composer"
     directory: "/"
     schedule:
       interval: "weekly"
+    reviewers:
+      - yardinternet/wordpress-backend
