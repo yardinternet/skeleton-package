@@ -1,5 +1,6 @@
 # Yard Skeleton Package
 
+![Code Style Badge](https://github.com/yardinternet/skeleton-package/actions/workflows/format-php.yml/badge.svg)
 ![PHPStan Badge](https://github.com/yardinternet/skeleton-package/actions/workflows/phpstan.yml/badge.svg)
 ![Tests Badge](https://github.com/yardinternet/skeleton-package/actions/workflows/run-tests.yml/badge.svg)
 ![Code Coverage Badge](https://raw.githubusercontent.com/yardinternet/skeleton-package/badges/coverage.svg)
