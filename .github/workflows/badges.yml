@@ -5,8 +5,8 @@ on:
     types: [published]
 
 jobs:
-  test:
-    name: Run tests
+  badges:
+    name: Create badges
     runs-on: ubuntu-latest
 
     steps:
@@ -39,14 +39,13 @@ jobs:
       - name: Run Unit Tests
         run: XDEBUG_MODE_COVERAGE=coverage vendor/bin/pest --coverage-clover=clover.xml
 
-      - name: Count Lines of Code
+      - name: Make lines of code badge
         uses: shadowmoose/GHA-LoC-Badge@1.0.0
         id: badge
         with:
           debug: true
           directory: ./
           badge: ./output/lines-of-code.svg
-          patterns: '*.php'
 
       - name: Make code coverage badge
         uses: timkrase/phpunit-coverage-badge@v1.2.1
