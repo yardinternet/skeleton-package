@@ -8,13 +8,13 @@ use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 use Yard\SkeletonPackage\Console\ExampleCommand;
 
-class ExampleServiceProvider extends PackageServiceProvider
+class SkeletonPackageServiceProvider extends PackageServiceProvider
 {
 
     public function configurePackage(Package $package): void
     {
         $package
-            ->name('example')
+            ->name('skeleton-package')
             ->hasConfigFile()
             ->hasViews()
             ->hasCommand(ExampleCommand::class);

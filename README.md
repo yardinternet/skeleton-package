@@ -1,4 +1,4 @@
-# Yard Skeleton Package
+# Yard :package_name
 
 ![Code Style Badge](https://github.com/yardinternet/skeleton-package/actions/workflows/format-php.yml/badge.svg)
 ![PHPStan Badge](https://github.com/yardinternet/skeleton-package/actions/workflows/phpstan.yml/badge.svg)
@@ -7,6 +7,15 @@
 ![Lines of Code Badge](https://raw.githubusercontent.com/yardinternet/skeleton-package/badges/lines-of-code.svg)
 
 This repository provides a scaffold for creating an Acorn package. For more detailed information, please refer to the [Acorn Package Development](https://roots.io/acorn/docs/package-development/) documentation.
+
+<!--delete-->
+Follow these steps to get started:
+
+1. Press the "Use this template" button at the top of this repo to create a new repo with the contents of this skeleton.
+2. Run "php ./configure.php" to run a script that will replace all placeholders throughout all the files.
+3. Have fun creating your package.
+---
+<!--/delete-->
 
 ## Installation
 
@@ -38,7 +47,7 @@ To install this package using Composer, follow these steps:
 You can publish the config file with:
 
 ```shell
-wp acorn vendor:publish --provider="Yard\SkeletonPackage\ExampleServiceProvider"
+wp acorn vendor:publish --provider="Yard\SkeletonPackage\SkeletonPackageServiceProvider"
 ```
 
 ## Usage
@@ -46,7 +55,7 @@ wp acorn vendor:publish --provider="Yard\SkeletonPackage\ExampleServiceProvider"
 From a Blade template:
 
 ```blade
-@include('Example::example')
+@include('skeleton-package::example')
 ```
 
 From WP-CLI:

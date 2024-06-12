@@ -22,7 +22,7 @@ class Example
      */
     public function getQuote(): string
     {
-        $quotes = config('example.quotes');
+        $quotes = config('skeleton-package.quotes');
 
         Assert::isArray($quotes);
 

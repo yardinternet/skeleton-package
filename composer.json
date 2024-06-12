@@ -1,7 +1,7 @@
 {
 	"name": "yard/skeleton-package",
 	"type": "package",
-	"description": "A skeleton package for Roots Acorn.",
+	"description": ":package_description",
   "version": "1.0.0",
 	"license": "MIT",
   "config": {
@@ -41,7 +41,7 @@
 	"extra": {
 		"acorn": {
 			"providers": [
-				"Yard\\SkeletonPackage\\ExampleServiceProvider"
+				"Yard\\SkeletonPackage\\SkeletonPackageServiceProvider"
 			],
 			"aliases": {
 				"Example": "Yard\\SkeletonPackage\\Facades\\Example"
