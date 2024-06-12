@@ -34,4 +34,14 @@ class Example
 
         return $quote;
     }
+
+    /**
+     * Retrieve a post content.
+     */
+    public function getPostContent(int $postId): string
+    {
+        $post = \get_post($postId);
+
+        return  $post ? $post->post_content : 'Post not found';
+    }
 }
