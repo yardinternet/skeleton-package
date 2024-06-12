@@ -1,6 +1,8 @@
 name: PhpUnit Coverage Badge
 
-on: push
+on:
+  release:
+    types: [published]
 
 jobs:
   test:
