@@ -18,7 +18,8 @@
 		"orchestra/testbench": "^8.23",
 		"pestphp/pest": "^2.34",
 		"szepeviktor/phpstan-wordpress": "^1.0",
-		"larastan/larastan": "^2.0"
+		"larastan/larastan": "^2.0",
+		"10up/wp_mock": "^0.4.2"
 	},
   "autoload": {
 		"psr-4": {
