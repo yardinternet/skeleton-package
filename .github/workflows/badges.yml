@@ -40,7 +40,7 @@ jobs:
         run: XDEBUG_MODE_COVERAGE=coverage vendor/bin/pest --coverage-clover=clover.xml
 
       - name: Make lines of code badge
-        uses: shadowmoose/GHA-LoC-Badge@1.0.0
+        uses: DeathSy/GHA-LoC-Badge@1.0.3
         id: badge
         with:
           debug: true
