@@ -1,6 +1,6 @@
 # Yard Skeleton Package
 
-![PHPStan Badge](https://github.com/yardinternet/skeleton-package/actions/workflows/.yml/badge.svg)
+![PHPStan Badge](https://github.com/yardinternet/skeleton-package/actions/workflows/phpstan.yml/badge.svg)
 ![Tests Badge](https://github.com/yardinternet/skeleton-package/actions/workflows/run-tests.yml/badge.svg)
 ![Code Coverage Badge](https://raw.githubusercontent.com/yardinternet/skeleton-package/badges/coverage.svg?token=GHSAT0AAAAAACCCLHCHAKVMDIPFZCEM5M22ZTJQTRQ)
 ![Lines of Code Badge](https://raw.githubusercontent.com/yardinternet/skeleton-package/badges/lines-of-code.svg?token=GHSAT0AAAAAACCCLHCHI4HRH4FZTJ7MQBOAZTJQUMQ)
