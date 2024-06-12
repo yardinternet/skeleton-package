@@ -44,7 +44,8 @@ jobs:
         id: badge
         with:
           debug: true
-          directory: ./
+          directory: ./src
+          patterns: '*.php'
           badge: ./output/lines-of-code.svg
 
       - name: Make code coverage badge
