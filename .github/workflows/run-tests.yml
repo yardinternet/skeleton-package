@@ -1,4 +1,4 @@
-name: Unit Tests with coverage
+name: Tests
 
 on:
   pull_request:
