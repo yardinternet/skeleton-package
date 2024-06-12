@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 use Yard\SkeletonPackage\Facades\Example;
 
 it('can retrieve a random inspirational quote', function () {
