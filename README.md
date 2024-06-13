@@ -1,8 +1,8 @@
 # Yard Skeleton Package
 
-![Code Style Badge](https://github.com/yardinternet/skeleton-package/actions/workflows/format-php.yml/badge.svg)
-![PHPStan Badge](https://github.com/yardinternet/skeleton-package/actions/workflows/phpstan.yml/badge.svg)
-![Tests Badge](https://github.com/yardinternet/skeleton-package/actions/workflows/run-tests.yml/badge.svg)
+[![Code Style](https://github.com/yardinternet/skeleton-package/actions/workflows/format-php.yml/badge.svg)](https://github.com/yardinternet/skeleton-package/actions/workflows/format-php.yml)
+[![PHPStan](https://github.com/yardinternet/skeleton-package/actions/workflows/phpstan.yml/badge.svg)](https://github.com/yardinternet/skeleton-package/actions/workflows/phpstan.yml)
+[![Tests](https://github.com/yardinternet/skeleton-package/actions/workflows/run-tests.yml/badge.svg)](https://github.com/yardinternet/skeleton-package/actions/workflows/run-tests.yml)
 ![Code Coverage Badge](https://raw.githubusercontent.com/yardinternet/skeleton-package/badges/coverage.svg)
 ![Lines of Code Badge](https://raw.githubusercontent.com/yardinternet/skeleton-package/badges/lines-of-code.svg)
 
