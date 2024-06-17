@@ -31,25 +31,17 @@ To install this package using Composer, follow these steps:
     }
     ```
 
-2. Add the following to the `require` section of your `composer.json`:
-
-    ```json
-    {
-      "yard/skeleton-package": "*"
-    }
-    ```
-
-3. Run the following command to install the package:
+2. Install this package with Composer:
 
     ```sh
-    composer update
+    composer require yard/skeleton-package
     ```
 
-Then run the Acorn WP-CLI command to discover this package:
+3. Run the Acorn WP-CLI command to discover this package:
 
-```shell
-wp acorn package:discover
-```
+    ```shell
+    wp acorn package:discover
+    ```
 
 You can publish the config file with:
 
