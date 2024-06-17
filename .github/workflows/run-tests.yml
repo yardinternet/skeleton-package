@@ -26,6 +26,10 @@ jobs:
 
     name: PHP${{ matrix.php }} - Laravel${{ matrix.laravel }}
 
+    permissions:
+      contents: read
+      pull-requests: write
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
