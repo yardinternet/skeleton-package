@@ -8,6 +8,7 @@ on:
       - 'phpunit.xml.dist'
       - 'composer.json'
       - 'composer.lock'
+  workflow_dispatch:
 
 jobs:
   test:
@@ -58,6 +59,7 @@ jobs:
         run: vendor/bin/pest --coverage-clover=coverage.xml
 
       - name: Coverage Report as Comment (Clover)
+        if: github.event_name == 'pull_request'
         uses: lucassabreu/comment-coverage-clover@main
         with:
           file: coverage.xml
