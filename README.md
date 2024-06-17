@@ -45,6 +45,12 @@ To install this package using Composer, follow these steps:
     composer update
     ```
 
+Then run the Acorn WP-CLI command to discover this package:
+
+```shell
+wp acorn package:discover
+```
+
 You can publish the config file with:
 
 ```shell
