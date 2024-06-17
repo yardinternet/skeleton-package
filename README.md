@@ -3,8 +3,8 @@
 [![Code Style](https://github.com/yardinternet/skeleton-package/actions/workflows/format-php.yml/badge.svg?no-cache)](https://github.com/yardinternet/skeleton-package/actions/workflows/format-php.yml)
 [![PHPStan](https://github.com/yardinternet/skeleton-package/actions/workflows/phpstan.yml/badge.svg?no-cache)](https://github.com/yardinternet/skeleton-package/actions/workflows/phpstan.yml)
 [![Tests](https://github.com/yardinternet/skeleton-package/actions/workflows/run-tests.yml/badge.svg?no-cache)](https://github.com/yardinternet/skeleton-package/actions/workflows/run-tests.yml)
-![Code Coverage Badge](https://raw.githubusercontent.com/yardinternet/skeleton-package/badges/coverage.svg)
-![Lines of Code Badge](https://raw.githubusercontent.com/yardinternet/skeleton-package/badges/lines-of-code.svg)
+[![Code Coverage Badge](https://github.com/yardinternet/skeleton-package/blob/badges/coverage.svg)](https://github.com/yardinternet/skeleton-package/actions/workflows/badges.yml)
+[![Lines of Code Badge](https://github.com/yardinternet/skeleton-package/blob/badges/lines-of-code.svg)](https://github.com/yardinternet/skeleton-package/actions/workflows/badges.yml)
 
 This repository provides a scaffold for creating an Acorn package. For more detailed information, please refer to the [Acorn Package Development](https://roots.io/acorn/docs/package-development/) documentation.
 
@@ -14,6 +14,7 @@ Follow these steps to get started:
 1. Press the "Use this template" button at the top of this repo to create a new repo with the contents of this skeleton.
 2. Run "php ./configure.php" to run a script that will replace all placeholders throughout all the files.
 3. Have fun creating your package.
+
 ---
 <!--/delete-->
 
