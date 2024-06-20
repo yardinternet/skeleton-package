@@ -10,7 +10,6 @@ use Yard\SkeletonPackage\Console\ExampleCommand;
 
 class SkeletonPackageServiceProvider extends PackageServiceProvider
 {
-
     public function configurePackage(Package $package): void
     {
         $package

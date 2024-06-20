@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Yard\SkeletonPackage;
 
-use \Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Support\Arr;
 use Webmozart\Assert\Assert;
 
