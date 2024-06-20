@@ -5,6 +5,10 @@ on:
     types: [published]
   workflow_dispatch:
 
+permissions:
+  contents: write
+  pull-requests: write
+
 jobs:
   badges:
     name: Create badges
@@ -19,6 +23,9 @@ jobs:
         with:
           php-version: '8.1'
           extensions:  simplexml, dom, xml, xdebug, intl
+          tools: composer:v2
+        env:
+              COMPOSER_TOKEN: ${{ secrets.YARD_BOT_PAT }}
 
       - name: Get composer cache directory
         id: composer-cache
