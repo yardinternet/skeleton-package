@@ -11,7 +11,7 @@ it('can retrieve a random inspirational quote', function () {
 it('can retrieve post content', function () {
     $postId = 123;
     $post = new stdClass();
-        $post->post_content = 'Hello World';
+        $post->post_content = 'Hello World!';
 
     WP_Mock::userFunction('get_post')
             ->once()
@@ -20,5 +20,5 @@ it('can retrieve post content', function () {
 
     $postContent = app()->make('Example')->getPostContent($postId);
 
-    expect($postContent)->tobe('Hello World');
+    expect($postContent)->tobe('Hello World!');
 });
