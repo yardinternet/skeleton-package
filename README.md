@@ -6,9 +6,10 @@
 [![Code Coverage Badge](https://github.com/yardinternet/skeleton-package/blob/badges/coverage.svg)](https://github.com/yardinternet/skeleton-package/actions/workflows/badges.yml)
 [![Lines of Code Badge](https://github.com/yardinternet/skeleton-package/blob/badges/lines-of-code.svg)](https://github.com/yardinternet/skeleton-package/actions/workflows/badges.yml)
 
+<!--delete-->
+---
 This repository provides a scaffold for creating an Acorn package. For more detailed information, please refer to the [Acorn Package Development](https://roots.io/acorn/docs/package-development/) documentation.
 
-<!--delete-->
 Follow these steps to get started:
 
 1. Press the "Use this template" button at the top of this repo to create a new repo with the contents of this skeleton.
@@ -17,6 +18,11 @@ Follow these steps to get started:
 
 ---
 <!--/delete-->
+
+## Requirements
+
+- [Sage](https://github.com/roots/sage) >= 10.0
+- [Acorn](https://github.com/roots/acorn) >= 4.0
 
 ## Installation
 
