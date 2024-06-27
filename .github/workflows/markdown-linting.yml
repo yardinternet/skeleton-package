@@ -1,0 +1,15 @@
+name: linting
+on:
+  pull_request:
+    paths:
+        - '**.md'
+
+jobs:
+  linting:
+    name: Markdown Linting
+    runs-on: ubuntu-latest
+    steps:
+      - uses: articulate/actions-markdownlint@v1
+        with:
+          config: .markdownlint.yaml
+          files: '**.md'
