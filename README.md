@@ -65,6 +65,6 @@ From a Blade template:
 
 From WP-CLI:
 
-```shell
+```
 wp acorn example
 ```
