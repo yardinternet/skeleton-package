@@ -16,6 +16,6 @@ jobs:
         with:
           fetch-depth: 0 # Required to make it possible to compare with PR base branch
       - name: NPM Lockfile Changes
-        uses: codepunkt/npm-lockfile-changes@main
+        uses: rvanvelzen/npm-lockfile-changes@main
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
