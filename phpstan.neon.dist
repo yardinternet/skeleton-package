@@ -7,6 +7,3 @@ parameters:
     paths:
         - src
     tmpDir: build/phpstan
-    ignoreErrors:
-        -
-            message: '#Call to an undefined static method Yard\\SkeletonPackage\\Facades\\Example::getQuote\(\)#'
