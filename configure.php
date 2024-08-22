@@ -136,18 +136,18 @@ foreach ($files as $file) {
     match (true) {
         str_contains($file, determineSeparator('src/Example.php')) => rename($file, determineSeparator('./src/'.$className.'.php')),
         str_contains($file, determineSeparator('src/SkeletonPackageServiceProvider.php')) => rename($file, determineSeparator('./src/'.$nameSpace.'ServiceProvider.php')),
-        str_contains($file, determineSeparator('src/Console/ExampleCommand.php')) => rename($file, determineSeparator('./src/console/'.$className.'Command.php')),
+        str_contains($file, determineSeparator('src/Console/ExampleCommand.php')) => rename($file, determineSeparator('./src/Console/'.$className.'Command.php')),
         str_contains($file, determineSeparator('src/Facades/Example.php')) => rename($file, determineSeparator('./src/Facades/'.$className.'.php')),
         str_contains($file, determineSeparator('resources/views/example.blade.php')) => rename($file, determineSeparator('./resources/views/'.$classSlug.'.blade.php')),
         str_contains($file, determineSeparator('tests/ExampleTest.php')) => rename($file, determineSeparator('./tests/'.$className.'Test.php')),
-        str_contains($file, determineSeparator('tests/Console/ExampleCommandTest.php')) => rename($file, determineSeparator('./tests/console/'.$className.'CommandTest.php')),
+        str_contains($file, determineSeparator('tests/Console/ExampleCommandTest.php')) => rename($file, determineSeparator('./tests/Console/'.$className.'CommandTest.php')),
         str_contains($file, determineSeparator('tests/Facades/ExampleTest.php')) => rename($file, determineSeparator('./tests/Facades/'.$className.'Test.php')),
         str_contains($file, 'README.md') => remove_readme_paragraphs($file),
         default => [],
     };
 }
 
-rename(determineSeparator('./config/example.php'), determineSeparator('./config/'.$packageSlug.'.php'));
+rename(determineSeparator('./config/skeleton-package.php'), determineSeparator('./config/'.$packageSlug.'.php'));
 
 confirm('Execute `composer install`?') && run('composer install');
 
