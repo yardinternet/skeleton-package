@@ -19,7 +19,7 @@ class TestCase extends Orchestra
     {
         parent::tearDown();
 
-       \WP_Mock::tearDown();
+        \WP_Mock::tearDown();
     }
 
     /**
