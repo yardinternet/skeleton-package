@@ -1,0 +1,7 @@
+name: Pull Request Workflow
+on: pull_request
+
+jobs:
+    dependabot-automerge:
+        uses: yardinternet/workflows/.github/workflows/dependabot-automerge.yml@main
+        secrets: inherit
