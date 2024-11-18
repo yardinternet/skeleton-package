@@ -5,6 +5,6 @@ on:
       - 'package-lock.json'
 
 jobs:
-  php-cs-fixer:
+  lockfile_changes:
     uses: yardinternet/workflows/.github/workflows/npm-lock-diff.yml@main
     secrets: inherit
