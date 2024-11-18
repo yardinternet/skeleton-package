@@ -1,10 +1,3 @@
-# This file is for unifying the coding style for different editors and IDEs
-# editorconfig.org
-
-# WordPress Coding Standards
-# https://make.wordpress.org/core/handbook/coding-standards/
-# https://github.com/WordPress/wordpress-develop/blob/trunk/.editorconfig
-
 root = true
 
 [*]
@@ -20,8 +13,6 @@ indent_size = 2
 
 [*.md]
 trim_trailing_whitespace = false
-# https://github.com/DavidAnson/markdownlint/blob/main/doc/md010.md
-# Hard tabs are often rendered inconsistently by different editors and can be harder to work with than spaces.
 indent_style = space
 
 [{*.txt,wp-config-sample.php}]
