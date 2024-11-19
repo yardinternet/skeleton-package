@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use PhpCsFixer\Finder;
+use Yard\PhpCsFixerRules\Config;
 
 # PHP CS Fixer can be run by using the composer script `composer format`
 
@@ -15,6 +16,6 @@ $finder = Finder::create()
     ->exclude('public')
     ->exclude('node_modules')
     ->exclude('build')
-;
+    ->append(['.php-cs-fixer.php']);
 
-return \Yard\PhpCsFixerRules\Config::create($finder);
+return Config::create($finder);
