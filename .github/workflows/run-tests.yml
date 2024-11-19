@@ -12,7 +12,7 @@ on:
 
 jobs:
   test:
-    uses: yardinternet/workflows/.github/workflows/skeleton-package-run-tests.yml@main
+    uses: yardinternet/workflows/.github/workflows/skeleton-package-run-tests.yml@feat/package-tests-workflow
     secrets: inherit
     with:
       php-version: '8.1'
