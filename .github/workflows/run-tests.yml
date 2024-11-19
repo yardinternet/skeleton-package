@@ -12,5 +12,5 @@ on:
 
 jobs:
   test:
-    uses: yardinternet/workflows/.github/workflows/skeleton-package-run-tests.yml@feat/package-tests-workflow
+    uses: yardinternet/workflows/.github/workflows/skeleton-package-run-tests.yml@main
     secrets: inherit
