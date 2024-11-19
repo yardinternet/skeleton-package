@@ -2,7 +2,6 @@
 	"name": "yard/skeleton-package",
 	"type": "package",
 	"description": ":package_description",
-  "version": "1.0.0",
 	"license": "MIT",
   "config": {
     "sort-packages": true,
