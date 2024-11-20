@@ -10,38 +10,38 @@ use Webmozart\Assert\Assert;
 
 class Example
 {
-    /**
-     * Create a new Example instance.
-     */
-    public function __construct(protected Application $app)
-    {
-    }
+	/**
+	 * Create a new Example instance.
+	 */
+	public function __construct(protected Application $app)
+	{
+	}
 
-    /**
-     * Retrieve a random inspirational quote.
-     */
-    public function getQuote(): string
-    {
-        $quotes = config('skeleton-package.quotes');
+	/**
+	 * Retrieve a random inspirational quote.
+	 */
+	public function getQuote(): string
+	{
+		$quotes = config('skeleton-package.quotes');
 
-        Assert::isArray($quotes);
+		Assert::isArray($quotes);
 
-        $quote = Arr::random(
-            $quotes
-        );
+		$quote = Arr::random(
+			$quotes
+		);
 
-        Assert::string($quote);
+		Assert::string($quote);
 
-        return $quote;
-    }
+		return $quote;
+	}
 
-    /**
-     * Retrieve a post content.
-     */
-    public function getPostContent(int $postId): string
-    {
-        $post = \get_post($postId);
+	/**
+	 * Retrieve a post content.
+	 */
+	public function getPostContent(int $postId): string
+	{
+		$post = \get_post($postId);
 
-        return  $post ? $post->post_content : 'Post not found';
-    }
+		return  $post ? $post->post_content : 'Post not found';
+	}
 }

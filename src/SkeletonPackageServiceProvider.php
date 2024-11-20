@@ -10,22 +10,22 @@ use Yard\SkeletonPackage\Console\ExampleCommand;
 
 class SkeletonPackageServiceProvider extends PackageServiceProvider
 {
-    public function configurePackage(Package $package): void
-    {
-        $package
-            ->name('skeleton-package')
-            ->hasConfigFile()
-            ->hasViews()
-            ->hasCommand(ExampleCommand::class);
-    }
+	public function configurePackage(Package $package): void
+	{
+		$package
+			->name('skeleton-package')
+			->hasConfigFile()
+			->hasViews()
+			->hasCommand(ExampleCommand::class);
+	}
 
-    public function packageRegistered(): void
-    {
-        $this->app->singleton('Example', fn () => new Example($this->app));
-    }
+	public function packageRegistered(): void
+	{
+		$this->app->singleton('Example', fn () => new Example($this->app));
+	}
 
-    public function packageBooted(): void
-    {
-        $this->app->make('Example');
-    }
+	public function packageBooted(): void
+	{
+		$this->app->make('Example');
+	}
 }
