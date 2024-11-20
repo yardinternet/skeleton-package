@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "60eb90984455da3ec43d51bf293c5cee",
+    "content-hash": "0c5dbeef1a8bacc5801ccfb35a31ff46",
     "packages": [
         {
             "name": "brick/math",
@@ -10046,21 +10046,21 @@
         },
         {
             "name": "yard/php-cs-fixer-rules",
-            "version": "1.0.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yardinternet/php-cs-fixer-rules.git",
-                "reference": "a97c6d5298a923436a47c230515330eaf18befbe"
+                "reference": "16e7cb6b66920d1910aabb989a06419ffcdb09f1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yardinternet/php-cs-fixer-rules/zipball/a97c6d5298a923436a47c230515330eaf18befbe",
-                "reference": "a97c6d5298a923436a47c230515330eaf18befbe",
+                "url": "https://api.github.com/repos/yardinternet/php-cs-fixer-rules/zipball/16e7cb6b66920d1910aabb989a06419ffcdb09f1",
+                "reference": "16e7cb6b66920d1910aabb989a06419ffcdb09f1",
                 "shasum": ""
             },
             "require": {
                 "ckr/arraymerger": "^3.0",
-                "php": "8.1.*",
+                "php": ">=8.1",
                 "webmozart/assert": "^1.11"
             },
             "require-dev": {
@@ -10081,9 +10081,9 @@
             "description": "Yard PHP CS Fixer rules",
             "support": {
                 "issues": "https://github.com/yardinternet/php-cs-fixer-rules/issues",
-                "source": "https://github.com/yardinternet/php-cs-fixer-rules/tree/v1.0.0"
+                "source": "https://github.com/yardinternet/php-cs-fixer-rules/tree/v1.0.1"
             },
-            "time": "2024-11-18T14:16:04+00:00"
+            "time": "2024-11-20T10:13:26+00:00"
         }
     ],
     "aliases": [],
