@@ -10046,25 +10046,25 @@
         },
         {
             "name": "yard/php-cs-fixer-rules",
-            "version": "v1.0.1",
+            "version": "v1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yardinternet/php-cs-fixer-rules.git",
-                "reference": "16e7cb6b66920d1910aabb989a06419ffcdb09f1"
+                "reference": "13dc2e5459c07ce7ff80c8e89641eaef271c1d58"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yardinternet/php-cs-fixer-rules/zipball/16e7cb6b66920d1910aabb989a06419ffcdb09f1",
-                "reference": "16e7cb6b66920d1910aabb989a06419ffcdb09f1",
+                "url": "https://api.github.com/repos/yardinternet/php-cs-fixer-rules/zipball/13dc2e5459c07ce7ff80c8e89641eaef271c1d58",
+                "reference": "13dc2e5459c07ce7ff80c8e89641eaef271c1d58",
                 "shasum": ""
             },
             "require": {
                 "ckr/arraymerger": "^3.0",
+                "friendsofphp/php-cs-fixer": "^3.64",
                 "php": ">=8.1",
                 "webmozart/assert": "^1.11"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^3.64",
                 "pestphp/pest": "^2.36",
                 "phpstan/phpstan": "^2.0"
             },
@@ -10081,9 +10081,9 @@
             "description": "Yard PHP CS Fixer rules",
             "support": {
                 "issues": "https://github.com/yardinternet/php-cs-fixer-rules/issues",
-                "source": "https://github.com/yardinternet/php-cs-fixer-rules/tree/v1.0.1"
+                "source": "https://github.com/yardinternet/php-cs-fixer-rules/tree/v1.0.2"
             },
-            "time": "2024-11-20T10:13:26+00:00"
+            "time": "2024-11-20T14:32:21+00:00"
         }
     ],
     "aliases": [],
