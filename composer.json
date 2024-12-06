@@ -39,6 +39,11 @@
 		"post-autoload-dump": [
 			"sed -i -e 's#function __(#function ____(#' ./vendor/php-stubs/wordpress-stubs/wordpress-stubs.php"
 		],
+		"all": [
+			"@test",
+			"@analyse",
+			"@format"
+		],
 		"analyse": "vendor/bin/phpstan analyse --debug --memory-limit 1G",
 		"format": "vendor/bin/php-cs-fixer fix",
 		"test": "vendor/bin/pest",
