@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Yard\SkeletonPackage\Console;
 
 use Illuminate\Console\Command;
-use Yard\SkeletonPackage\Facades\Example;
+use Yard\SkeletonPackage\Example;
 
 class ExampleCommand extends Command
 {
@@ -29,7 +29,7 @@ class ExampleCommand extends Command
 	public function handle(): void
 	{
 		$this->info(
-			Example::getQuote()
+			app(Example::class)->getQuote()
 		);
 	}
 }
