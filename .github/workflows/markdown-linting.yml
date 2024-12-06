@@ -1,4 +1,4 @@
-name: linting
+name: Markdown Linting
 on:
   pull_request:
     paths:
