@@ -21,11 +21,11 @@ class SkeletonPackageServiceProvider extends PackageServiceProvider
 
 	public function packageRegistered(): void
 	{
-		$this->app->singleton('Example', fn () => new Example($this->app));
+		$this->app->singleton(Example::class, fn () => new Example($this->app));
 	}
 
 	public function packageBooted(): void
 	{
-		$this->app->make('Example');
+		$this->app->make(Example::class);
 	}
 }

@@ -1,9 +1,13 @@
-name: Create badges
+name: Create Badges
 
 on:
   release:
     types: [published]
   workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 permissions:
   contents: write
