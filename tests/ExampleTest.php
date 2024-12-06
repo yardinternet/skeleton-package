@@ -2,8 +2,10 @@
 
 declare(strict_types=1);
 
+use Yard\SkeletonPackage\Example;
+
 it('can retrieve a random inspirational quote', function () {
-	$quote = app()->make('Example')->getQuote();
+	$quote = app()->make(Example::class)->getQuote();
 
 	expect($quote)->tobe('For every Sage there is an Acorn.');
 });
@@ -18,7 +20,7 @@ it('can retrieve post content', function () {
 		->with(123)
 		->andReturn($post);
 
-	$postContent = app()->make('Example')->getPostContent($postId);
+	$postContent = app()->make(Example::class)->getPostContent($postId);
 
 	expect($postContent)->tobe('Hello World!');
 });
