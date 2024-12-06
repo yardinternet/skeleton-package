@@ -1,4 +1,4 @@
-name: Create badges
+name: Create Badges
 
 on:
   release:
