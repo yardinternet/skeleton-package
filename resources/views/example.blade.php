@@ -1,1 +1,1 @@
-{{ Example::getQuote() }}
+{{ app(\Yard\SkeletonPackage\Example::class)->getQuote() }}
