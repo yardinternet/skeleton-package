@@ -57,10 +57,7 @@
 		"acorn": {
 			"providers": [
 				"Yard\\SkeletonPackage\\SkeletonPackageServiceProvider"
-			],
-			"aliases": {
-				"Example": "Yard\\SkeletonPackage\\Facades\\Example"
-			}
+			]
 		}
 	}
 }
