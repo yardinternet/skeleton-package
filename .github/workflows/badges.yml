@@ -10,6 +10,6 @@ permissions:
   pull-requests: write
 
 jobs:
-  composer-diff:
+  create-badges:
     uses: yardinternet/workflows/.github/workflows/badges.yml@main
     secrets: inherit
