@@ -41,7 +41,9 @@
 	},
 	"scripts": {
 		"post-autoload-dump": [
-			"sed -i -e 's#function __(#function ____(#' ./vendor/php-stubs/wordpress-stubs/wordpress-stubs.php"
+			"if [ -f ./vendor/laravel/framework/src/Illuminate/Foundation/helpers.php ]; then sed -i -e \"s#function __(#function a__(#\" ./vendor/laravel/framework/src/Illuminate/Foundation/helpers.php; fi",
+			"if [ -f ./vendor/roots/acorn/src/Illuminate/Foundation/helpers.php ]; then sed -i -e \"s#function __(#function b__(#\" ./vendor/roots/acorn/src/Illuminate/Foundation/helpers.php; fi",
+			"if [ -f ./vendor/larastan/larastan/stubs/common/Helpers.stub ]; then sed -i -e \"s#function __(#function c__(#\" ./vendor/larastan/larastan/stubs/common/Helpers.stub; fi"
 		],
 		"all": [
 			"@test",
