@@ -13,11 +13,11 @@
 			"pestphp/pest-plugin": true
 		},
 		"platform": {
-			"php": "8.1"
+			"php": "8.3"
 		}
 	},
 	"require": {
-		"php": ">=8.1",
+		"php": ">=8.2",
 		"roots/acorn": "^4.3",
 		"spatie/laravel-package-tools": "^1.16"
 	},
