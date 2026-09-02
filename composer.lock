@@ -4,8 +4,56 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "af33a41b9535fc968a147050869ef72c",
+    "content-hash": "fbaa05d1612140d177a5e98fd0f94424",
     "packages": [
+        {
+            "name": "brain/assets",
+            "version": "0.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Brain-WP/Assets.git",
+                "reference": "92e49bd7c44c7fa431fa680552ed5ea1bf9f81b4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Brain-WP/Assets/zipball/92e49bd7c44c7fa431fa680552ed5ea1bf9f81b4",
+                "reference": "92e49bd7c44c7fa431fa680552ed5ea1bf9f81b4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">= 8.0 < 8.4"
+            },
+            "require-dev": {
+                "brain/monkey": "^2.6.1",
+                "inpsyde/php-coding-standards": "^2@dev",
+                "inpsyde/wp-stubs-versions": "dev-latest",
+                "phpcompatibility/php-compatibility": "^10@dev",
+                "phpunit/phpunit": "^9.6.16",
+                "vimeo/psalm": "^5.22.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Brain\\Assets\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Giuseppe Mazzapica",
+                    "email": "giuseppe.mazzapica@gmail.com"
+                }
+            ],
+            "description": "WordPress assets helpers.",
+            "support": {
+                "issues": "https://github.com/Brain-WP/Assets/issues",
+                "source": "https://github.com/Brain-WP/Assets/tree/0.3.0"
+            },
+            "time": "2024-03-01T18:23:27+00:00"
+        },
         {
             "name": "brick/math",
             "version": "0.12.3",
@@ -5601,6 +5649,49 @@
                 }
             ],
             "time": "2026-04-26T05:33:54+00:00"
+        },
+        {
+            "name": "yard/wp-package-installer",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:yardinternet/wp-package-installer.git",
+                "reference": "5a1b5d60e4fa25ee70a87438a929dc5ae54e9496"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://satis.yard.nl/dist/yard/wp-package-installer/yard-wp-package-installer-5a1b5d60e4fa25ee70a87438a929dc5ae54e9496-zip-fedf4d.zip",
+                "reference": "5a1b5d60e4fa25ee70a87438a929dc5ae54e9496",
+                "shasum": "ae54ca901b247d4664589d12bff69b9d99858676"
+            },
+            "require": {
+                "composer-plugin-api": "^2.9",
+                "php": ">=7.4"
+            },
+            "require-dev": {
+                "composer/composer": "^2.10",
+                "php-stubs/wordpress-stubs": "^7.0",
+                "yard/php-cs-fixer-rules": "^1.0"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "Yard\\WordPressPackageInstaller\\WordPressPackagePlugin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Yard\\WordPressPackageInstaller\\": "src/"
+                },
+                "files": [
+                    "src/functions.php"
+                ]
+            },
+            "scripts": {
+                "format": [
+                    "vendor/bin/php-cs-fixer fix"
+                ]
+            },
+            "description": "Composer installer for WordPress packages",
+            "time": "2026-09-01T10:14:43+00:00"
         }
     ],
     "packages-dev": [

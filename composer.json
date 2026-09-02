@@ -11,16 +11,25 @@
 		"sort-packages": true,
 		"allow-plugins": {
 			"pestphp/pest-plugin": true,
-			"phpstan/extension-installer": true
+			"phpstan/extension-installer": true,
+			"yard/wp-package-installer": true
 		},
 		"platform": {
 			"php": "8.2"
 		}
 	},
+	"repositories": [
+		{
+			"type": "composer",
+			"url": "https://satis.yard.nl"
+		}
+	],
 	"require": {
 		"php": ">=8.2",
+		"brain/assets": "^0.3.0",
 		"roots/acorn": "^4.3",
-		"spatie/laravel-package-tools": "^1.16"
+		"spatie/laravel-package-tools": "^1.16",
+		"yard/wp-package-installer": "^1.0"
 	},
 	"require-dev": {
 		"10up/wp_mock": "^0.4.2",

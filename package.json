@@ -1,0 +1,38 @@
+{
+	"name": "@yardinternet/wp-pdok",
+	"private": true,
+	"packageManager": "pnpm@10.33.0+sha512.10568bb4a6afb58c9eb3630da90cc9516417abebd3fabbe6739f0ae795728da1491e9db5a544c76ad8eb7570f5c4bb3d6c637b2cb41bfdcdb47fa823c8649319",
+	"engines": {
+		"node": ">=22"
+	},
+	"scripts": {
+		"start": "wp-scripts start",
+		"build": "wp-scripts build",
+		"lint:js": "yard-toolkit lint js -m custom 'resources/scripts/**/!(*.d).ts",
+		"lint:css": "yard-toolkit lint css -m custom 'resources/styles/**/*.css'",
+		"format:js": "yard-toolkit format js -m custom 'resources/scripts/**/!(*.d).ts'",
+		"format:css": "yard-toolkit format css -m custom 'resources/styles/**/*.css'",
+		"prepare": "husky"
+	},
+	"lint-staged": {
+		"src/**/*.php": "vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php --path-mode=intersection --",
+		"resources/scripts/**/!(*.d).ts": [
+			"eslint --fix",
+			"prettier --write"
+		],
+		"resources/styles/**/*.css": [
+			"stylelint --fix",
+			"prettier --write"
+		]
+	},
+	"devDependencies": {
+		"@yardinternet/eslint-config": "^1.2.12",
+		"@yardinternet/prettier-config": "^2.0.11",
+		"@yardinternet/stylelint-config": "^1.1.8",
+		"@yardinternet/toolkit": "^2.1.12",
+		"@yardinternet/ts-config": "^1.1.2",
+		"@wordpress/scripts": "^31.8.0",
+		"husky": "^9.1.7",
+		"lint-staged": "^15.2.10"
+	}
+}
