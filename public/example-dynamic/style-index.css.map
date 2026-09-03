@@ -1,1 +1,0 @@
-{"version":3,"file":"example-dynamic/style-index.css","mappings":";;;AAAA;EACC;AACD,C","sources":["webpack://@yardinternet/wp-pdok/./resources/blocks/example-dynamic/style.scss"],"sourcesContent":[".wp-block-yard-example-dynamic {\n\tbackground-color: hotpink;\n}\n"],"names":[],"sourceRoot":""}

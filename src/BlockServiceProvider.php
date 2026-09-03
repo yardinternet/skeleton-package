@@ -4,21 +4,21 @@ declare(strict_types=1);
 
 namespace Yard\SkeletonPackage;
 
+use Illuminate\Support\ServiceProvider;
 use Yard\SkeletonPackage\Blocks\ExampleBlock;
 
-class BlockService
+class BlockServiceProvider extends ServiceProvider
 {
+	private AssetService $assets;
+
 	private const RENDERERS = [
 		'yard/example-dynamic' => ExampleBlock::class,
 	];
 
-	public function __construct(
-		private AssetService $assets,
-	) {
-	}
-
-	public function register(): void
+	public function boot(): void
 	{
+		$this->assets = $this->app->make(AssetService::class);
+
 		add_filter('plugins_url', $this->blockAssetUrl(...), 10, 3);
 		add_filter('block_type_metadata_settings', $this->addRenderCallback(...), 10, 2);
 		add_action('init', $this->registerBlocks(...));
