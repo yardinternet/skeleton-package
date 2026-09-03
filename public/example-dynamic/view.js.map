@@ -1,0 +1,1 @@
+{"version":3,"file":"example-dynamic/view.js","mappings":";;;;AAAAA,OAAO,CAACC,GAAG,CAAE,yDAA0D,CAAC,CAAC,CAAC,iC","sources":["webpack://@yardinternet/wp-pdok/./resources/blocks/example-dynamic/view.js"],"sourcesContent":["console.log( 'Hello World! (from the yard/example-dynamic view block)' ); // eslint-disable-line no-console\n\n"],"names":["console","log"],"sourceRoot":""}

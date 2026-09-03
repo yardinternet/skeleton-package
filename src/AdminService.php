@@ -2,36 +2,26 @@
 
 declare(strict_types=1);
 
-namespace Yard\SkeletonPackage\Components;
-
-use Illuminate\Contracts\View\Factory;
-use Illuminate\View\Component;
-use Illuminate\View\View;
+namespace Yard\SkeletonPackage;
 
 use function Yard\WordPressPackageInstaller\package_path;
 use function Yard\WordPressPackageInstaller\package_url;
 
-class ExampleComponent extends Component
+class AdminService
 {
 	private const PACKAGE = 'yard/skeleton-package';
-	private const HANDLE = 'skeleton-package-example-component';
+	private const HANDLE = 'skeleton-package-admin';
 
-	public function __construct(
-		public ?string $title = 'Default example component title',
-	) {}
-
-	public function render(): Factory|View
+	public function register(): void
 	{
-		$this->enqueueAssets();
-
-		return view('skeleton-package::components/example-component');
+		add_action('admin_enqueue_scripts', $this->enqueueAdminAssets(...));
 	}
 
-	private function enqueueAssets(): void
+	private function enqueueAdminAssets(): void
 	{
 		$asset = $this->getDependencyAsset();
-		$scriptUrl = package_url(self::PACKAGE, '/public/example-component.js');
-		$styleUrl = package_url(self::PACKAGE, '/public/example-component.css');
+		$scriptUrl = package_url(self::PACKAGE, '/public/admin.js');
+		$styleUrl = package_url(self::PACKAGE, '/public/admin.css');
 
 		if (null === $asset || null === $scriptUrl || null === $styleUrl) {
 			return;
@@ -48,7 +38,7 @@ class ExampleComponent extends Component
 	 */
 	private function getDependencyAsset(): ?array
 	{
-		$assetPath = package_path(self::PACKAGE, '/public/example-component.asset.php');
+		$assetPath = package_path(self::PACKAGE, '/public/admin.asset.php');
 
 		if (null === $assetPath || ! file_exists($assetPath)) {
 			return null;

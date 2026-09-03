@@ -3,12 +3,18 @@ process.env.WP_BLOCKS_MANIFEST = true; // TODO: only add this when blocks are pr
 
 const { resolve } = require( 'node:path' );
 const defaultConfig = require( '@wordpress/scripts/config/webpack.config' );
+const {
+	addPackagesToConfig,
+} = require( '@yardinternet/gutenberg-webpack-loaders' );
 
 module.exports = {
-	...defaultConfig,
+	...addPackagesToConfig( defaultConfig, [
+		'@yardinternet/gutenberg-components',
+	] ),
 	entry: {
 		...defaultConfig.entry(), // TODO: only add this when blocks are present in the project?
-		example: './resources/scripts/example.ts', // TODO: Rename index to package name?
+		'example-component': './resources/scripts/example-component.ts',
+		admin: './resources/scripts/admin.ts',
 	},
 	output: {
 		...defaultConfig.output,

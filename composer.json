@@ -1,6 +1,6 @@
 {
 	"name": "yard/skeleton-package",
-	"type": "package",
+	"type": "wordpress-package",
 	"description": ":package_description",
 	"license": "MIT",
 	"support": {
@@ -26,7 +26,6 @@
 	],
 	"require": {
 		"php": ">=8.2",
-		"brain/assets": "^0.3.0",
 		"roots/acorn": "^4.3",
 		"spatie/laravel-package-tools": "^1.16",
 		"yard/wp-package-installer": "^1.0"

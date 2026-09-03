@@ -4,7 +4,7 @@ return array(
 	'example-dynamic' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
-		'name' => 'create-block/example-dynamic',
+		'name' => 'yard/example-dynamic',
 		'version' => '0.1.0',
 		'title' => 'Example Dynamic',
 		'category' => 'yard',
@@ -16,11 +16,10 @@ return array(
 		'supports' => array(
 			'html' => false
 		),
-		'textdomain' => 'example-dynamic',
+		'textdomain' => 'skeleton-package',
 		'editorScript' => 'file:./index.js',
 		'editorStyle' => 'file:./index.css',
 		'style' => 'file:./style-index.css',
-		'render' => 'file:./render.php',
 		'viewScript' => 'file:./view.js'
 	)
 );
