@@ -7,18 +7,17 @@ namespace Yard\SkeletonPackage;
 use Illuminate\Support\ServiceProvider;
 use Yard\SkeletonPackage\Blocks\ExampleBlock;
 
+use function Yard\WordPressPackageInstaller\package_path;
+use function Yard\WordPressPackageInstaller\package_url;
+
 class BlockServiceProvider extends ServiceProvider
 {
-	private AssetService $assets;
-
 	private const RENDERERS = [
 		'yard/example-dynamic' => ExampleBlock::class,
 	];
 
 	public function boot(): void
 	{
-		$this->assets = $this->app->make(AssetService::class);
-
 		add_filter('plugins_url', $this->blockAssetUrl(...), 10, 3);
 		add_filter('block_type_metadata_settings', $this->addRenderCallback(...), 10, 2);
 		add_action('init', $this->registerBlocks(...));
@@ -26,8 +25,8 @@ class BlockServiceProvider extends ServiceProvider
 
 	private function registerBlocks(): void
 	{
-		$blocksPath = $this->assets->path('/public');
-		$manifestPath = $this->assets->path('/public/blocks-manifest.php');
+		$blocksPath = package_path(Package::NAME, '/public');
+		$manifestPath = package_path(Package::NAME, '/public/blocks-manifest.php');
 
 		if (null === $blocksPath || null === $manifestPath) {
 			return;
@@ -71,13 +70,13 @@ class BlockServiceProvider extends ServiceProvider
 	 */
 	private function blockAssetUrl(string $url, string $path, string $plugin): string
 	{
-		$packagePath = $this->assets->path();
+		$packagePath = package_path(Package::NAME);
 		$plugin = wp_normalize_path($plugin);
 
 		if (null === $packagePath || ! str_starts_with($plugin, $packagePath . '/')) {
 			return $url;
 		}
 
-		return $this->assets->url(substr($plugin, strlen($packagePath))) ?? $url;
+		return package_url(Package::NAME, substr($plugin, strlen($packagePath))) ?? $url;
 	}
 }
