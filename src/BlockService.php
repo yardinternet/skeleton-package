@@ -6,16 +6,16 @@ namespace Yard\SkeletonPackage;
 
 use Yard\SkeletonPackage\Blocks\ExampleBlock;
 
-use function Yard\WordPressPackageInstaller\package_path;
-use function Yard\WordPressPackageInstaller\package_url;
-
 class BlockService
 {
-	private const PACKAGE = 'yard/skeleton-package';
-
 	private const RENDERERS = [
 		'yard/example-dynamic' => ExampleBlock::class,
 	];
+
+	public function __construct(
+		private AssetService $assets,
+	) {
+	}
 
 	public function register(): void
 	{
@@ -26,8 +26,8 @@ class BlockService
 
 	private function registerBlocks(): void
 	{
-		$blocksPath = package_path(self::PACKAGE, '/public');
-		$manifestPath = package_path(self::PACKAGE, '/public/blocks-manifest.php');
+		$blocksPath = $this->assets->path('/public');
+		$manifestPath = $this->assets->path('/public/blocks-manifest.php');
 
 		if (null === $blocksPath || null === $manifestPath) {
 			return;
@@ -39,6 +39,7 @@ class BlockService
 	/**
 	 * @param array<string, mixed> $settings
 	 * @param array<string, mixed> $metadata
+	 *
 	 * @return array<string, mixed>
 	 */
 	private function addRenderCallback(array $settings, array $metadata): array
@@ -49,7 +50,7 @@ class BlockService
 			return $settings;
 		}
 
-		$settings['render_callback'] = fn(array $attributes, string $content, \WP_Block $block): string
+		$settings['render_callback'] = fn (array $attributes, string $content, \WP_Block $block): string
 		=> app($renderer)->render($attributes, $content, $block);
 
 		return $settings;
@@ -70,13 +71,13 @@ class BlockService
 	 */
 	private function blockAssetUrl(string $url, string $path, string $plugin): string
 	{
-		$packagePath = package_path(self::PACKAGE);
+		$packagePath = $this->assets->path();
 		$plugin = wp_normalize_path($plugin);
 
 		if (null === $packagePath || ! str_starts_with($plugin, $packagePath . '/')) {
 			return $url;
 		}
 
-		return package_url(self::PACKAGE, substr($plugin, strlen($packagePath))) ?? $url;
+		return $this->assets->url(substr($plugin, strlen($packagePath))) ?? $url;
 	}
 }

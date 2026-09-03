@@ -7,53 +7,20 @@ namespace Yard\SkeletonPackage\Components;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\View\Component;
 use Illuminate\View\View;
-
-use function Yard\WordPressPackageInstaller\package_path;
-use function Yard\WordPressPackageInstaller\package_url;
+use Yard\SkeletonPackage\AssetService;
 
 class ExampleComponent extends Component
 {
-	private const PACKAGE = 'yard/skeleton-package';
-	private const HANDLE = 'skeleton-package-example-component';
-
 	public function __construct(
+		private AssetService $assets,
 		public ?string $title = 'Default example component title',
-	) {}
+	) {
+	}
 
 	public function render(): Factory|View
 	{
-		$this->enqueueAssets();
+		$this->assets->enqueue('example-component');
 
 		return view('skeleton-package::components/example-component');
-	}
-
-	private function enqueueAssets(): void
-	{
-		$asset = $this->getDependencyAsset();
-		$scriptUrl = package_url(self::PACKAGE, '/public/example-component.js');
-		$styleUrl = package_url(self::PACKAGE, '/public/example-component.css');
-
-		if (null === $asset || null === $scriptUrl || null === $styleUrl) {
-			return;
-		}
-
-		wp_enqueue_script(self::HANDLE, $scriptUrl, $asset['dependencies'], $asset['version'], true);
-
-		wp_enqueue_style(self::HANDLE, $styleUrl, [], $asset['version']);
-		wp_style_add_data(self::HANDLE, 'rtl', 'replace');
-	}
-
-	/**
-	 * @return array{dependencies: array<int, string>, version: string}|null
-	 */
-	private function getDependencyAsset(): ?array
-	{
-		$assetPath = package_path(self::PACKAGE, '/public/example-component.asset.php');
-
-		if (null === $assetPath || ! file_exists($assetPath)) {
-			return null;
-		}
-
-		return require $assetPath;
 	}
 }

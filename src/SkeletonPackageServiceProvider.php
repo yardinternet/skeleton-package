@@ -7,9 +7,7 @@ namespace Yard\SkeletonPackage;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 use Yard\SkeletonPackage\Components\ExampleComponent;
-use Yard\SkeletonPackage\AdminService;
 use Yard\SkeletonPackage\Console\ExampleCommand;
-use Yard\SkeletonPackage\BlockService;
 
 class SkeletonPackageServiceProvider extends PackageServiceProvider
 {
