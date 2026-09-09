@@ -132,7 +132,7 @@ function remove_asset_lines(string $file): void
 
 	$contents = implode('', array_filter(
 		$lines,
-		fn(string $line): bool => ! str_contains($line, '// @asset')
+		fn (string $line): bool => ! str_contains($line, '// @asset')
 	));
 
 	// An array literal whose every entry was marked collapses to an empty one.
