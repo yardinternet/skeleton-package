@@ -19,9 +19,12 @@ class SkeletonPackageServiceProvider extends PackageServiceProvider
 		ExampleCommand::class,
 	];
 
-	private const PROVIDERS = [
-		AdminServiceProvider::class,
-		BlockServiceProvider::class,
+	/**
+	 * @var array<int, class-string<\Illuminate\Support\ServiceProvider>>
+	 */
+	private array $providers = [
+		AdminServiceProvider::class, // @asset
+		BlockServiceProvider::class, // @asset
 	];
 
 	public function configurePackage(Package $package): void
@@ -36,7 +39,7 @@ class SkeletonPackageServiceProvider extends PackageServiceProvider
 
 	public function packageRegistered(): void
 	{
-		foreach (self::PROVIDERS as $provider) {
+		foreach ($this->providers as $provider) {
 			$this->app->register($provider);
 		}
 	}

@@ -4,6 +4,6 @@
 	 */
 @endphp
 
-<div class="skeleton-example-component">
+<div class="example-component">
 	{{ $title }}
 </div>
