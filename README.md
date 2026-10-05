@@ -17,6 +17,10 @@ Follow these steps to get started:
 3. If this repo is part of the Yardinternet organisation make sure to complete the [checklist](https://github.com/yardinternet/skeleton-package/wiki/New-package-checklist)
 4. Have fun creating your package.
 
+### Asset build
+
+`configure.php` asks whether to include the asset build. Declining it deletes the build tooling, `resources/{scripts,styles,blocks}`, the asset-related providers and sets `"type": "package"` in `composer.json`
+
 ---
 <!--/delete-->
 

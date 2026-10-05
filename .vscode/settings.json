@@ -1,0 +1,19 @@
+{
+	"editor.formatOnSave": true,
+	"editor.codeActionsOnSave": { "source.fixAll.eslint": "explicit" },
+	"css.validate": false,
+	"[scss][css][postcss]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.codeActionsOnSave": { "source.fixAll.prettier": "explicit", "source.fixAll.stylelint": "explicit" }
+	},
+	"[javascript][typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.codeActionsOnSave": { "source.fixAll.prettier": "explicit", "source.fixAll.eslint": "explicit" },
+		"editor.formatOnPaste": false
+	},
+	"[json]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+	"prettier.configPath": ".prettierrc.cjs",
+	"stylelint.validate": [ "css", "scss", "postcss" ],
+	"eslint.validate": [ "javascript", "typescript" ],
+	"eslint.workingDirectories": [ { "changeProcessCWD": true, "mode": "auto" } ]
+}
